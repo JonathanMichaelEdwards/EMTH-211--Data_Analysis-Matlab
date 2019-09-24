@@ -39,17 +39,16 @@ c_system_2 = A2 \ y;
 c_system_3 = A3 \ y;  % Not the same as c_3 !!! Getting a warning
 
 
-y1 = c_1(1,1) + c_1(2,1)*x
-y2 = c_2(1,1) + c_2(2,1).*x + c_2(3,1)*x.^2
-y3 = c_3(1,1) + c_3(2,1).*x + c_3(3,1)*x.^2 + c_3(4,1)*x.^3
+y1 = c_1(1) + c_1(2)*x;
+y2 = c_2(1) + c_2(2).*x + c_2(3)*x.^2;
+y3 = c_3(1) + c_3(2).*x + c_3(3)*x.^2 + c_3(4)*x.^3;
 
+figure(1)
 plot(x, y1, x, y2, x, y3);
 legend('A1', 'A2', 'A3');
 
-
-
-% figure(1);
-% scatter(x, y);
-% lsline;
+figure(2)
+scatter(x, y);
+lsline;
 
 

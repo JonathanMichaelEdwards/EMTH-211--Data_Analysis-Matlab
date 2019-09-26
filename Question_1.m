@@ -60,12 +60,15 @@ figure(1);
 plot(x, y1, x, y2, x, y3);
 xticks(0:10:80);
 xticklabels(1928:10:2010);
-xlim([-4 84]);
-ylim([10.4 12.3]);
 hold on;
 scatter(x, y);
 scatter(2008-1928, time2008);
 hold off;
+
+% Additives for viewing purposes
+grid
+xlim([-4 84]);
+ylim([10.4 12.3]);
 xlabel('Years');
 ylabel('Time (s)');
 title('Least squares approximation for degrees 1, 2 and 3');

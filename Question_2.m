@@ -1,6 +1,6 @@
 clear, clc;
 
-% Loading in test data as matrix X
+% Loading in test data
 load('A1.mat')
 
 % Extracting x and y values from test data

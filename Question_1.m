@@ -4,13 +4,13 @@ clear, clc
 y = [12.2 11.9 11.5 11.9 11.5 11.5 11.0 11.4 11.0 ...
      11.07 11.08 11.60 10.97 10.54 10.82 10.94 10.75 10.93]';
    
+% Scaleing x
 x = [(0:4:8)'; (20:4:76)'];
 
 % Fnding the different A matricies
 A1 = [x.^0 x.^1];
 A2 = [x.^0 x.^1 x.^2];
 A3 = [x.^0 x.^1 x.^2 x.^3];
-
 
 % ------------------ QR decomposition of A ------------------ %
 % - We know Ax = y and Rx = Q'b thus we can rearrange to find
@@ -56,14 +56,17 @@ time2008 = (y1t + y2t + y3t) / 3;
 
 
 % ------------------ Plotting ------------------ %
-figure(1)
+figure(1);
 plot(x, y1, x, y2, x, y3);
-
+xticks(0:10:80);
+xticklabels(1928:10:2010);
+xlim([-4 84]);
+ylim([10.4 12.3]);
 hold on;
 scatter(x, y);
 scatter(2008-1928, time2008);
 hold off;
-xlabel('Years since 1928');
+xlabel('Years');
 ylabel('Time (s)');
 title('Least squares approximation for degrees 1, 2 and 3');
 legend('Deg 1', 'Deg 2', 'Deg 3', 'Test data', 'Predicted data');

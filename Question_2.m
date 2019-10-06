@@ -1,3 +1,5 @@
+% Question 2
+
 clear, clc;
 
 % Loading in test data
@@ -28,7 +30,7 @@ hold off
 
 % Additives for viewing purposes
 grid
-title('Least Square Approximation for Conic Section in a Plane');
+%title('Least Square Approximation for Conic Section in a Plane');
 xlabel('x')
 ylabel('y')
 legend('Test Data', 'Approximation');

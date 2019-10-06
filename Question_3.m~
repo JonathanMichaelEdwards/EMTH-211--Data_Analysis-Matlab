@@ -1,5 +1,3 @@
-% Question 3
-
 clear, clc
 
 % Loading in test data
@@ -42,3 +40,4 @@ for j = 1:length(image_sv)
     colormap(gray(256));
     image(new_A);
 end
+

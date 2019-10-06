@@ -33,16 +33,16 @@ c_2 = qr_2(:,4);
 c_3 = qr_3(:,5);
 
 % Checking the linear system using the backslash operator
-c_system_1 = A1 \ y;
-c_system_2 = A2 \ y;
-c_system_3 = A3 \ y;  % Not the same as c_3 !!! Getting a warning
+c_system_1 = A1 \ y
+c_system_2 = A2 \ y
+c_system_3 = A3 \ y  % Not the same as c_3 !!! Getting a warning
 
-y1 = c_1(1) + c_1(2)*x;
+y1 = c_1(1) + c_1(2)*x;c_1
 y2 = c_2(1) + c_2(2).*x + c_2(3)*x.^2;
 y3 = c_3(1) + c_3(2).*x + c_3(3)*x.^2 + c_3(4)*x.^3;
 
 % The Residual Error for each fit
-r1 = sumabs(y - y1) / length(y);
+r1 = sumabs(y - y1) / length(y)
 r2 = sumabs(y - y2) / length(y);
 r3 = sumabs(y - y3) / length(y);
 
@@ -52,7 +52,7 @@ y1t = c_1(1) + c_1(2)*xt;
 y2t = c_2(1) + c_2(2)*xt + c_2(3)*xt^2;
 % Use y3t for a more accurate prediction according to residual error
 y3t = c_3(1) + c_3(2)*xt + c_3(3)*xt^2 + c_3(4)*xt^3; 
-time2008 = (y1t + y2t + y3t) / 3;
+time2008 = (y1t + y2t + y3t) / 3
 
 
 % ------------------ Plotting ------------------ %

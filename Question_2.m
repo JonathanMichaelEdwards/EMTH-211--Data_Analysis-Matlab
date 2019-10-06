@@ -9,7 +9,7 @@ y = X(2, :)';
 
 % Least squares array for equation: Ax^2 + By^2 + Cxy + Dx + Ey + F = 0
 % Finds coefficients as matrix c
-A = [x.^2 y.^2 x.*y x y];
+A = [x.^2 y.^2 x.*y x y]
 b = ones(length(X), 1);
 c = A\b;
 

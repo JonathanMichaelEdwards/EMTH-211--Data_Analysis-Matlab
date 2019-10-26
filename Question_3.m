@@ -2,6 +2,7 @@ clear, clc
 
 % Loading in test data
 load('A1.mat')
+store_images = [];
 
 [U, S, V] = svd(A);
 A_sz = size(A);
@@ -29,12 +30,16 @@ for j = 1:length(image_sv)
     
     A_sizes(j) = image_sv(j)*(A_sz(1)+A_sz(2));
     
-    figure(j)
+%     figure(j)
     colormap(gray(256));
     image(new_A);
+%     a = imadd(new_A, 1);
+
+%     store_images = [new_A]
+    
 end
 
 og_size = A_sz(1) * (A_sz(1)+A_sz(2));
 A_sizes = (A_sizes/og_size) * 100;
 
-disp(A_sizes)
+disp(A_sizes);

@@ -5,12 +5,12 @@ y = [12.2 11.9 11.5 11.9 11.5 11.5 11.0 11.4 11.0 ...
      11.07 11.08 11.60 10.97 10.54 10.82 10.94 10.75 10.93]';
    
 % Scaleing x
-x = [(0:4:8)'; (20:4:76)'];
+x = [(0:4:8)'; (20:4:76)']
 
 % Fnding the different A matricies
 A1 = [x.^0 x.^1];
 A2 = [x.^0 x.^1 x.^2];
-A3 = [x.^0 x.^1 x.^2 x.^3];
+A3 = [x.^0 x.^1 x.^2 x.^3]
 
 % ------------------ QR decomposition of A ------------------ %
 % - We know Ax = y and Rx = Q'b thus we can rearrange to find
@@ -33,13 +33,13 @@ c_2 = qr_2(:,4);
 c_3 = qr_3(:,5);
 
 % Checking the linear system using the backslash operator
-c_system_1 = A1 \ y;
+c_system_1 = A1 \ y
 c_system_2 = A2 \ y;
 c_system_3 = A3 \ y;  % Not the same as c_3 !!! Getting a warning
 
 y1 = c_1(1) + c_1(2)*x;
-y2 = c_2(1) + c_2(2).*x + c_2(3)*x.^2;
-y3 = c_3(1) + c_3(2).*x + c_3(3)*x.^2 + c_3(4)*x.^3;
+y2 = c_2(1) + c_2(2)*x + c_2(3)*x.^2;
+y3 = c_3(1) + c_3(2)*x + c_3(3)*x.^2 + c_3(4)*x.^3;
 
 % The Residual Error for each fit
 r1 = sumabs(y - y1) / length(y);

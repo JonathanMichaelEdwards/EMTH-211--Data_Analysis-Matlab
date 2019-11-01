@@ -5,7 +5,7 @@ function [x, lambda] = PowerMethod(A, x, k)
 
     for ii = 1:k
         y = A*x;
-        lambda = (y'*x) / (x'*x);    % or, norm(y) / norm(x);
         x = (y / norm(y, inf));      % scaling the vector
+        lambda = ((A*x)'*x) / (x'*x);
     end
 end 

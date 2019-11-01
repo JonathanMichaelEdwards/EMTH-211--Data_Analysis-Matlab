@@ -1,10 +1,12 @@
+close, clc, clear;
+
 x = [1 0]';
 k = 6;
 
 % Q1)
 % Approximate for the 'dominant' eigenvalue and eigenvector    (Power Method)
 A1 = [7 2; 2 3];
-[x1, lambda1] = PowerMethod(A1, x, k);
+[x1, lambda1] = PowerMethod(A1, x, 1)
 
 
 
@@ -32,4 +34,4 @@ A3 = [7 2; 2 3];
 
 A4 = [0.8 0.4; 0.2 0.6];
 x4 = [1 0]';
-[x4, lambda4] = InversePowerMethod_2(A4, x4, 1)
+[x4, lambda4] = InversePowerMethod_2(A4, x4, 1);

@@ -13,7 +13,7 @@ function [x, lambda] = InversePowerMethod_2(A, x, k)
     for ii = 1:k
         w = L \ x;
         z = U \ w;
-        x = z / norm(z, inf)
+        x = z / norm(z, inf);
         lambda = ((A*x)'*x) / (x'*x);
     end
 end 

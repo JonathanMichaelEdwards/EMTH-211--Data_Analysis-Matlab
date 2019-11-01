@@ -4,6 +4,7 @@ clear, clc
 
 % Loading in test data
 load('A1.mat')
+store_images = [];
 
 % Computing the SVD of A to retrienve the singular values
 [U, S, V] = svd(A);
@@ -38,7 +39,19 @@ for j = 1:length(image_sv)
     
     A_sizes(j) = 100 * image_sv(j)/A_sz(1);
     
-    figure(j)
+%     figure(j)
     colormap(gray(256));
     image(new_A);
+%     a = imadd(new_A, 1);
+
+%     store_images = [new_A]
+    
 end
+<<<<<<< HEAD:Question_3.m
+
+og_size = A_sz(1) * (A_sz(1)+A_sz(2));
+A_sizes = (A_sizes/og_size) * 100;
+
+disp(A_sizes);
+=======
+>>>>>>> d9170448c1712bf5be95961b425739a7d41041c9:Assignment 1/Question_3.m

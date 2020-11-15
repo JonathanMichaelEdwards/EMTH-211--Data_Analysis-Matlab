@@ -1,3 +1,2 @@
 *.HTML linguist-detectable=false
-*.MATLAB linguist-detectable=true
-*.M linguist-detectable=true
+*.MATLAB linguist-detectable=false
